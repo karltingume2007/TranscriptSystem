@@ -2,14 +2,14 @@
 
 class school_program extends MY_Model
 {
-    const DB_TABLE = 'schoolprograms';
-    const DB_TABLE_PK = 'programId';
+    const DB_TABLE = 'school_programs';
+    const DB_TABLE_PK = 'program_id';
     
-    public $programId;
+    public $program_id;
     
-    public $programName;
+    public $program_name;
     
-    public $schoolId;
+    public $school_id;
     
     public function get_program($id = 0)
     {
