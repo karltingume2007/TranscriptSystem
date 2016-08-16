@@ -1,0 +1,40 @@
+body{
+	background: red;
+}
+td i{
+	color: #5ad;
+}
+a i{
+	color: #d33;
+}
+a.hover{
+	margin-left: 5px;
+}
+
+#wrapper h2,h1,i{
+	text-align: center;
+}
+.add_school button{
+	margin-left:30%;
+}
+.header{
+	background: #3a3a3a;
+	color:#fff;
+	border:1px solid #3a3a3a;
+	text-align: center;
+	box-shadow: 3px 4px 8px #000;
+}
+.engineering, .business{
+	border:1px solid #ccc;
+	margin-top: 5%;
+	box-shadow: 3px 3px 10px #999;
+
+}
+footer{
+	background: #3a3a3a;
+	color:#fff;
+	border:1px solid #3a3a3a;
+	text-align: center;
+	box-shadow: 3px 4px 8px #000;
+	margin-top: 6%;
+}
