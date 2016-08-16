@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Login</title>
+        <title>Home</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
@@ -17,8 +17,15 @@ and open the template in the editor.
     </head>
     <body>
         <div class="container">
+            <nav class=" nav navbar-default navbar-static-top nav-pills text-capitalize text-center ">
+                <img src="resources/images/fomic_logo.bmp" class="navbar-header"/>
+                <a class="navbar-text" href="#index" > FOMIC POLYTECHNIC</a>
+            </nav>
+            
+            <div class="col-md-12"></div>
+            
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-3" ma>
                     
                         <ul class="nav nav-tabs nav-pills nav-stacked tabs-left text-left">                            
                             <li class=" active"><a href="#index" data-toggle="tab">Home</a></li>
