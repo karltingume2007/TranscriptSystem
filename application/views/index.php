@@ -18,14 +18,14 @@ and open the template in the editor.
     <body>
         <div class="container">
             <nav class=" nav navbar-default navbar-static-top nav-pills text-capitalize text-center ">
-                <img src="resources/images/fomic_logo.bmp" class="navbar-header"/>
+                <img src="resources/images/fomic_logo.jpg" class="navbar-header"/>
                 <a class="navbar-text" href="#index" > FOMIC POLYTECHNIC</a>
             </nav>
             
             <div class="col-md-12"></div>
             
             <div class="row">
-                <div class="col-md-3" ma>
+                <div class="col-md-3">
                     
                         <ul class="nav nav-tabs nav-pills nav-stacked tabs-left text-left">                            
                             <li class=" active"><a href="#index" data-toggle="tab">Home</a></li>
@@ -34,8 +34,7 @@ and open the template in the editor.
                             <li class=""><a href="#programs" data-toggle="tab">Departments/Programs</a></li>
                             <li class=""><a href="#results" data-toggle="tab">Results</a></li>
                             <li class=""><a href="#personnel" data-toggle="tab">Employees/Lecturers</a></li>                            
-                        </ul>                        
-                                                 
+                        </ul>                                                                   
                 </div> 
                 
                 <div class="col-md-9">
