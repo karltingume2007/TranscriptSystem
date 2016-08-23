@@ -14,71 +14,62 @@
     <body>
         <div class="container">
             <div class="row">
-                <div class="col-md-8">
-                    <div class="modal-open">
-                        <div class="modal-content">
-                            <form>
-                                <table class="col-md-8">
-                                    <tr>
-                                        <td><label>Student Name:</label></td><td><input type="text" name="name" width="30%"></td>
-                                    </tr> 
-                                    <tr>
-                                        <td><label>Date of Birth:</label></td><td><input type="text" name="dob" width="30%"></td>                                
-                                    </tr>
-                                    <tr>
-                                        <td><label>Gender:</label></td><td><input type="text" name="gender" width="30%"></td>
-                                    </tr>
-                                    <tr>
-                                        <td><label>Level:</td></label>
-                                        <td>
-                                            <select name="level">
+                <div class="col-md-offset-2 col-md-8">
+                    <div class="panel panel-primary">
+                        <div class="panel-body">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="inputStudentName" class="control-label col-xs-4">Student Name:</label>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" id="inputStudentName" placeholder="Enter Student Name">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="programOrDepartment" class="control-label col-xs-4">Department/Program:</label>
+                                    <div class="col-md-6">
+                                        <select class="form-control" id="inputProgramDepartment" placeholder="Enter Department/Program">
+                                            <option value="ee"> Software Engineering </option>
+                                            <option value="ict">Information Communication Technology (ICT)</option>
+                                            <option value="ee">Electrical Engineering</option>
+                                            <option value="networking">Network</option>
+                                            <option value="telecom">Telecom</option> 
+                                            <option value="telecom">Accounting</option> 
+                                            <option value="telecom">Management</option> 
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="level" class="control-label col-xs-4">Level:</label>
+                                    <div class="col-md-6">
+                                        <select class="form-control" id="inputLevel" placeholder="Select level">
                                             <option value="1">Level 1</option>
                                             <option value="2">Level 2</option>
                                             <option value="3">Level 3</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><label>Program:</label></td>
-                                        <td>                                    
-                                            <select name="program">
-                                                <option value="se">Software Engineering</option>
-                                                <option value="ict">Information Communication Technology (ICT)</option>
-                                                <option value="ee">Electrical Engineering</option>
-                                                <option value="networking">Network</option>
-                                                <option value="telecom">Telecom</option> 
-                                                <option value="telecom">Accounting</option> 
-                                                <option value="telecom">Management</option> 
-                                            </select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><label>Academic Year:</label></td>
-                                        <td>
-                                            <select name="academic_year">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="academicYear" class="control-label col-xs-4">Academic Year:</label>
+                                    <div class="col-md-6">
+                                        <select class="form-control" id="inputAcademicYear" placeholder="Select Academic Year">
                                             <option value="2010/2011">2010/2011</option>
                                             <option value="2011/2012">2011/2012</option>
                                             <option value="2012/2013">2012/2013</option>
                                             <option value="2013/2014">2013/2014</option>
                                             <option value="2014/2015">2014/2015</option>
                                             <option value="2015/2016">2015/2016</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td><input type="button" name="save" value="Save"></td>
-                                        <td><input type="button" name="cancel" value="Cancel"</td>
-                                    </tr>
-                                </table>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary col-xs-offset-2 col-xs-3">SAVE</button>
+                                    <button type="button" class="btn btn-danger col-xs-offset-1 col-xs-3">CANCEL</button>
+                                </div>
                             </form>
                         </div>
-                        
-                    </div>
-                                      
-                    
-                </div>
-            </div>
+                    </div>                    
+                </div>                              
+            </div>                                                         
         </div>
     </body>
     
