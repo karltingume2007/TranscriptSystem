@@ -159,7 +159,7 @@ if(!function_exists('echo_wait_form'))
     function echo_wait_form()
     {
         echo '<span ng-show="showWaitForm"><img src="'.
-                base_url("stuff/images/loading.gif") .
+                base_url("resources/images/loading.gif") .
                 '" / style="width:20px">  Loading</span>';
     }
 }

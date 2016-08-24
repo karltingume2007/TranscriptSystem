@@ -1,5 +1,5 @@
 body{
-	background: red;
+	
 }
 td i{
 	color: #5ad;
@@ -30,6 +30,11 @@ a.hover{
 	box-shadow: 3px 3px 10px #999;
 
 }
+.software_all ul li a{
+	color: #3a3a3a;
+	font-weight: bold;
+}
+
 footer{
 	background: #3a3a3a;
 	color:#fff;

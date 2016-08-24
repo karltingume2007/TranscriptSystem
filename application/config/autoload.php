@@ -51,8 +51,15 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
-
-$autoload['libraries'] = array();
+$autoload['libraries'] = array(
+    'database', 
+    'session', 
+    'form_validation', 
+    'table', 
+    'upload', 
+    //'global_functions',
+    'pagination'
+    );
 
 
 /*
@@ -64,7 +71,14 @@ $autoload['libraries'] = array();
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('url');
+$autoload['helper'] = array(
+    'url', 
+    'global_functions', 
+    'date', 
+    'global_constants',
+    'html',
+    'cookie'
+    );
 
 
 /*
@@ -109,7 +123,9 @@ $autoload['language'] = array();
 |
 */
 
-$autoload['model'] = array();
+$autoload['model'] = array(
+    'user'
+);
 
 
 /* End of file autoload.php */

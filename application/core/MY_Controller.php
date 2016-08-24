@@ -18,7 +18,7 @@ class MY_Controller extends CI_Controller
         
         if ($this->session->userdata('user_id') == false)
         {
-            redirect('authentication');
+            redirect('authentication/login');
         }
         
         if($this->permission && !current_user_has_permission($this->permission))
@@ -28,7 +28,7 @@ class MY_Controller extends CI_Controller
     }
 
     public function LoadViewHeader() {
-        $this->load->view('header');
+        $this->load->view('includes/header');
     }
 
     public function LoadViewFooter($angular_js_view = null) 
@@ -37,7 +37,7 @@ class MY_Controller extends CI_Controller
             'angular_js_view' => $angular_js_view
         );
         
-        $this->load->view('footer', $array);
+        $this->load->view('includes/footer', $array);
     }
 
 }

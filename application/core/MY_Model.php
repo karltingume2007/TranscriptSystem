@@ -4,6 +4,11 @@ class MY_Model extends CI_Model{
     const DB_TABLE = 'abstract';
     const DB_TABLE_PK = 'abstract';
     
+    function __construct()
+    {
+        parent::__construct();
+    }
+    
     //create record
     protected function insert() {
         $this -> db -> insert($this::DB_TABLE, $this);
