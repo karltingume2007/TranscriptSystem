@@ -4,7 +4,7 @@
         {{loginMessage}}
     </div>
     
-    <?php echo echo_wait_form();?>
+    <?php echo echo_wait_form("Checking...");?>
     
     <form>
         <label>

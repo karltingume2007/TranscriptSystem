@@ -156,11 +156,11 @@ if(!function_exists('course_exists'))
 
 if(!function_exists('echo_wait_form'))
 {
-    function echo_wait_form()
+    function echo_wait_form($message = 'Loading')
     {
         echo '<span ng-show="showWaitForm"><img src="'.
                 base_url("resources/images/loading.gif") .
-                '" / style="width:20px">  Loading</span>';
+                '" / style="width:20px">  '. $message. '</span>';
     }
 }
 

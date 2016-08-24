@@ -38,7 +38,9 @@
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">                            
                             <?php
-                                echo "<li>" . anchor(site_url('home'), "Home") . "</li>";
+                                echo "<li>" . anchor(site_url('school_settings'), "School Configuration") . "</li>";
+                                echo "<li>" . anchor(site_url('enrollment'), "Enrollments") . "</li>";
+                                
                             ?>
                            
                             <?php
