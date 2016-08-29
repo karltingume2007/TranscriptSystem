@@ -16,8 +16,7 @@
     <meta name="Fomic" content="fomicgroup.cm">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/main.css'); ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/bootstrap.min.css'); ?>">
-    <script src="<?php echo base_url('resources/js/bootstrap.min.js'); ?>"></script>
-    <script src="<?php echo base_url('resources/js/jquery-1.12.3.min.js'); ?>"></script>
+    
 	
 </head>
 
