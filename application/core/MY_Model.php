@@ -102,5 +102,16 @@ class MY_Model extends CI_Model{
         return $ret_val;
     }
     
+    public function execute_command($sql)
+    {
+        $this->db->query($sql);
+    }
+    
+    public function execute_query($sql)
+    {
+        $query = $this->db->query($sql);
+        return $query->result();
+    }
+    
 }
 

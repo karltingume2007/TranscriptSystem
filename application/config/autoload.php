@@ -124,7 +124,9 @@ $autoload['language'] = array();
 */
 
 $autoload['model'] = array(
-    'user'
+    'school_program',
+    'user',
+    'school',
 );
 
 

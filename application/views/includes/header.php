@@ -3,20 +3,18 @@
     <head>
     <title>Student Manager</title>
     <meta charset="utf-8">
-    <!-- Bootstrap Library -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- End on link to bootstrap library -->
-
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/font-awesome/css/font-awesome.min.css');?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keyword" content="transcript generation">
     <meta name="description" content="">
     <meta name="Fomic" content="fomicgroup.cm">
+
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/font-awesome/css/font-awesome.min.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/main.css'); ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/bootstrap.min.css'); ?>">
     
+    <script type="text/javascript" src="<?php echo base_url('resources/js/jquery-1.12.3.min.js');?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('resources/js/angular.min.js');?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('resources/js/bootstrap.min.js');?>"></script>
 	
 </head>
 

@@ -5,7 +5,7 @@ class setting extends MY_Controller {
     public function index()
     {
         $this->LoadViewHeader();
-        $this->load->view('school_configuration/schoolConfig');
+        $this->load->view('school_configuration/settings');
         $this->LoadViewFooter();
     }
 }
