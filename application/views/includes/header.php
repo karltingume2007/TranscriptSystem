@@ -39,6 +39,8 @@
                             <?php
                                 echo "<li>" . anchor(site_url('school_settings'), "School Configuration") . "</li>";
                                 echo "<li>" . anchor(site_url('enrollment'), "Enrollments") . "</li>";
+                                echo "<li>" . anchor(site_url('transcript'), "Transcript") . "</li>";
+                                echo "<li>" . anchor(site_url('setting'), "Settings") . "</li>";
                                 
                             ?>
                            
