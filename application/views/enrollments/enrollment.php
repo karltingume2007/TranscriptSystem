@@ -12,13 +12,17 @@
     </head>
     
     <body>
-        <div class="container">
+        <div class="alert alert-danger" ng-show="showNoRecordsFoundDisplayMessage">
+        {{noRecordsFoundDisplayMessage}}
+        </div>
+        
+        <div class="container" ng-controller="enrollmentController as controller">
             <div class="row">
                 <div class="panel panel-default">
-                    <form class="form form-inline">
+                    <form name="enrollment_search_criteria_form" class="form form-inline" ng-submit="search_enrollment()" novalidate="">
                         <div class="form-group">
                             <label class="control-label">Academic Year:</label>
-                            <select name="academic_year" class="form-control" id="inputAcademicYear">
+                            <select name="academic_year" class="form-control" id="inputAcademicYear" ng-model="academicYear">
                                 <!-- Add logic that autogenerates this list-->
                                 <option value="2010/2011">2010/2011</option>
                                 <option value="2011/2012">2011/2012</option>
@@ -30,7 +34,7 @@
                         </div>
                         <div class="form-group">
                             <label class="control-label">Department/Program:</label>
-                            <select name="program" class="form-control" id="inputProgramDepartment">
+                            <select name="program" class="form-control" id="inputProgramDepartment" ng-model="departmentOrProgram">
                                 <!-- Add logic that picks this up from the db-->
                                 <option value="se">Software Engineering</option>
                                 <option value="ict">Information Communication Technology (ICT)</option>
@@ -43,7 +47,7 @@
                         </div>
                         <div class="form-group">
                             <label class="control-label">Level:</label>
-                            <select name="level" class="form-control">
+                            <select name="level" class="form-control" ng-model="level">
                                 <option value="1">Level 1</option>
                                 <option value="2">Level 2</option>
                                 <option value="3">Level 3</option>
@@ -51,42 +55,23 @@
                         </div>
                         <div class="form-group">
                             <label class="control-label">Student Name:</label>
-                            <input class="form-control" type="search" name="search" placeholder="Enter Student Name">
-                            <input class="btn btn-default" type="button" name="search" value="search">
+                            <input class="form-control" type="search" name="search" placeholder="Enter Student Name" ng-model="studentName">
+                            <input class="btn btn-default" type="submit" name="search" value="search">
                         </div>
                     </form>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <table class="table table-bordered table-condensed table-striped table-hover col-md-9" d>
+                        <table class="table table-bordered table-condensed table-striped table-hover col-md-9" ng-repeat="enrollment in controller.enrollments" ng-hide="showNoRecordsFoundDisplayMessage">
                             <th>Student Name</th>
                             <th>Mat. Number</th>
                             <th>Program</th>
                             <th>Level</th>
-                            <!-- Add logic that picks this up from the db and creates a clickable row for each record-->
                             <tr>
-                                <td>Karl Tingume</td>
-                                <td>FPSE12345</td>
-                                <td>Software Engineering</td>
-                                <td>Level 3</td>
-                            </tr>
-                            <tr>
-                                <td>Titus Yusinyu</td>
-                                <td>FPSE54321</td>
-                                <td>ICT</td>
-                                <td>Level 2</td>
-                            </tr>
-                            <tr>
-                                <td>Michael Fossung</td>
-                                <td>FPSE54231</td>
-                                <td>Accounting</td>
-                                <td>Level 1</td>
-                            </tr>
-                            <tr>
-                                <td>Ebune Joseph</td>
-                                <td>FPSE32145</td>
-                                <td>Electric Engineering</td>
-                                <td>Level 2</td>
+                                <td>{{enrollment.students.studentName}}</td>
+                                <td>{{enrollment.students.matricule}}</td>
+                                <td>{{enrollment.schoolprograms.programName}}</td>
+                                <td>{{enrollment.level}}</td>
                             </tr>
                         </table>
                     </div>

@@ -1,6 +1,6 @@
 <script type="text/javascript">
 (function(){
-angular.module('transcript', [])
+ang ular.module('transcript', [])
 .controller('loginViewController', function($scope, $http, $window)
 {
     $scope.siteURL = '<?php echo site_url();?>';
