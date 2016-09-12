@@ -1,27 +1,20 @@
-<?php
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Enrollment extends MY_Controller
+class enrollment extends MY_Controller
 {
     public function index()
     {
-        $this->LoadViewHeader();
+        $this->load->view('includes/header');
         $this->load->view('enrollments/enrollment');
-        $this->LoadViewFooter();
-    }
+        
+        $footer_data = array('angular_js_view' => 'enrollments/enrollment_js');
+        
+        $this->load->view('includes/footer', $footer_data);
+    }   
     
     public function search_enrollments($criteria = null)
     {
-        $query = $this->db->get_where('enrollments', array(
-            'academicYear' => $criteria['academicYear'],
-          //  'programId' => $criteria[''],
-            'level' => $criteria['level'],
-          //  'studentId' => $criteria['']
-        ));
-        if ($query->num_rows() > 0)
-        {
-             $this->populate($query->row());   
-        }
-  //      $enrollement = new Enrollment();
-  //      return $enrollement->g
+        $query = $this->enrollment->search_enrollments($criteria);
+        return $query;
     }
 }

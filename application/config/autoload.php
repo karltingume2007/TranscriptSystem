@@ -127,6 +127,7 @@ $autoload['model'] = array(
     'school_program',
     'user',
     'school',
+    'enrollment'
 );
 
 
