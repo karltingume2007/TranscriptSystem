@@ -36,7 +36,7 @@
                         <ul class="nav navbar-nav navbar-right">                            
                             <?php
                                 echo "<li>" . anchor(site_url('school_settings'), "School Configuration") . "</li>";
-                                echo "<li>" . anchor(site_url('enrollment'), "Enrollments") . "</li>";
+                                echo "<li>" . anchor(site_url('enrolments'), "Enrolments") . "</li>";
                                 echo "<li>" . anchor(site_url('transcript'), "Transcript") . "</li>";
                                 echo "<li>" . anchor(site_url('setting'), "Settings") . "</li>";
                                 

@@ -2,12 +2,27 @@
 
 class school_program extends MY_Model
 {
-    const DB_TABLE = 'school_programs';
-    const DB_TABLE_PK = 'program_id';
+    const DB_TABLE = 'schoolprograms';
+    const DB_TABLE_PK = 'programId';
     
-    public $program_id;
+    public $programId;
     
-    public $program_name;
+    public $programName;
     
-    public $school_id;
+    public $schoolId;
+    
+    public function get_program($id = 0)
+    {
+        if($id == 0){
+            $id = $this->programId;
+        }
+        $program = new school_program();
+        return $program->get_where(array('programId'=>$id));
+    }
+    
+//    public function get_all_programs()
+ //   {
+//        $query = $this->get('school_programs');
+ //       return $query;
+ //   }
 }

@@ -7,7 +7,6 @@ angular.module('transcript', [])
     $scope.showMessageLabel = false;
     $scope.showWaitForm = false;
     $scope.allSchools = [];
-    
     $scope.getAllSchools = function(){
        $scope.showWaitForm = true;
         

@@ -1,0 +1,9 @@
+- Ensure that after creating a new student and enrolment, the modal window closes on its own
+
+- Ensure that it is possible to search for enrolments by the specified criteria
+
+- Ensure that the searched enrolments display in a table 
+
+  - The list of searched enrolments should display as clickable items
+  - Upon clicking any of the items, it should modally load a dialog that shows details of that enrolment 
+  - It should be possible to add marks to that enrolemnt from that window.
