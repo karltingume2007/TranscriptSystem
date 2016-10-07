@@ -127,7 +127,12 @@ $autoload['model'] = array(
     'school_program',
     'user',
     'school',
-    'enrolment'
+    'enrolment',
+    'student',
+    'course',
+    'studentCourse',
+    'course',
+    'personel'
 );
 
 

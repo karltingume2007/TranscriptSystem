@@ -21,7 +21,7 @@ class enrolment extends MY_Model
             $id = $this->programId;
         }
         $program = new school_program();
-        return $program->get_where(array('school_id'=>$id));
+        return $program->get_where(array('programId'=>$id));
     }
     
     public function get_student($id = 0)
@@ -37,7 +37,7 @@ class enrolment extends MY_Model
     {
         //$sql = generate_query($criteria);    
         
-        $sql = "SELECT * FROM enrollments";
+        $sql = 'SELECT * FROM enrollments';
         if ($criteria['academicYear'] != null)
         {
             $sql += " WHERE academicYear = " + $criteria['academicYear'];

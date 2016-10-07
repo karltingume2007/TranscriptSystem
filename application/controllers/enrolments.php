@@ -11,27 +11,31 @@ class enrolments extends MY_Controller
     
     public function search_enrolments()
     {  
+        echo "this function is reached";
+        
         $criteria = json_decode(file_get_contents("php://input"));
         $enrolment = new enrolment();
         $return_value = array(); 
         foreach($enrolment->search_enrolments($criteria) as $enrolment_object)
         {
             $enr = (array)$enrolment_object;
-            $enr['programId'] = $enrolment_object->get_program();
-            $enr['studentId'] = $enrolment_object->get_student();
+            $enr['programId'] = $enrolment_object->programId;
+            $enr['studentId'] = $enrolment_object->studentId;
+            $enr['level'] = $enrolment_object->level;
+            $enr['matricule'] = $enrolment_object->matricule;
             $return_value[] = $enr;
         }
         echo json_encode($return_value);
     }
     
-    public function get_all_enrollments() {
+    public function get_all_enrolments() {
         $enrolment = new enrolment();
         $return_value = array();        
         foreach($enrolment->get() as $enrolment_object)
         {
             $enr = (array)$enrolment_object;
-            $enr['programId'] = $enrolment_object->get_program();
-            $enr['schoolId'] = $enrolment_object->get_school();
+            $enr['program'] = $enrolment_object->get_program();
+            $enr['student'] = $enrolment_object->get_student();
             $return_value[] = $enr;
         }
         echo json_encode($return_value);
