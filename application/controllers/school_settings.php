@@ -9,6 +9,7 @@ class school_settings extends MY_Controller {
         $this->LoadViewFooter('school_configuration/school_settings_js');
     }
     
+    
     public function get_all_schools() {
         $school = new school();
         $return_value = array();        
@@ -50,5 +51,58 @@ class school_settings extends MY_Controller {
         $sc['school_programs'] = $programs;
         
         echo json_encode($sc);
+    }
+    
+    
+    public function save_school_program()
+    {
+        $data = json_decode(file_get_contents("php://input"));
+        //show_array($data->levels);
+        
+        foreach($data->levels as $level)
+        {
+            foreach($level->courses as $courseObject)
+            {                
+                $course = new course();
+                $course->course_id = $courseObject->course_id;
+                $course->course_name = $courseObject->course_name;
+                $course->course_code = $courseObject->course_code;
+                $course->credit_value = $courseObject->credit_value;
+                $course->save();
+                
+                $pc = new program_course();
+                $pc->program_course_id = $courseObject->program_course_id;
+                $pc->program_id = $courseObject->program_id;
+                $pc->course_id = $course->course_id;
+                $pc->level_id = $courseObject->level_id;
+                $pc->semester = $courseObject->semester;
+                $pc->credit_value = $courseObject->credit_value;
+                $pc->save();
+            }
+        }
+    }
+    
+    
+    public function get_program_course_levels($program_id)
+    {
+        $pc = new detailed_program_course();
+        $level = new level();
+        
+        $all_levels = $level->get();
+        $ret_val = array();
+        foreach ($all_levels as $l)
+        {
+            $level = (array)$l;
+            $level['courses'] = $pc->get_where(array('program_id' => $program_id, 'level_id'=>$l->level_id));
+            $ret_val[] = $level;
+        }
+        echo json_encode($ret_val);
+    }
+    
+    public function get_all_courses()
+    {
+        $course = new course();
+        $all_courses = $course->get();
+        echo json_encode($all_courses);
     }
 }

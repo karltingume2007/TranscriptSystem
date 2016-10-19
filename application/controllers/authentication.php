@@ -28,7 +28,7 @@ class authentication extends CI_Controller {
         $this->load->view("login/login");
         
         $footer_data = array('angular_js_view' => 'login/login_js');
-        
+
         $this->load->view('includes/footer', $footer_data);
     }
     

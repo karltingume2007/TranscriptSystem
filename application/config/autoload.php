@@ -130,9 +130,13 @@ $autoload['model'] = array(
     'enrolment',
     'student',
     'course',
-    'studentCourse',
+    'student_course',
     'course',
-    'personel'
+    'personel',
+    'detailed_program_course',
+    'level',
+    'course',
+    'program_course'
 );
 
 

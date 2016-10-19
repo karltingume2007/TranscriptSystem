@@ -3,13 +3,13 @@
 class course extends MY_Model
 {
     const DB_TABLE = 'courses';
-    const DB_TABLE_PK = 'courseId';
+    const DB_TABLE_PK = 'course_id';
     
-    public $courseId;
+    public $course_id;
     
-    public $courseName;
+    public $course_name;
     
-    public $courseCode;
+    public $course_code;
     
-    public $creditValue;
+    public $credit_value;
 }

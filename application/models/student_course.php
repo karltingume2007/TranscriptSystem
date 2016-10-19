@@ -1,6 +1,6 @@
 <?php
 
-class studentCourse extends MY_Model
+class student_course extends MY_Model
 {
     const DB_TABLE = 'studentCourses';
     const DB_TABLE_PK = 'enrollmentId';
