@@ -1,8 +1,8 @@
 <?php
 
-class enrolment extends MY_Model
+class detailed_enrollment extends MY_Model
 {
-    const DB_TABLE = 'enrollments';
+    const DB_TABLE = 'detailed_enrollments';
     const DB_TABLE_PK = 'enrollment_id';
     
     public $enrollment_id;
@@ -14,5 +14,11 @@ class enrolment extends MY_Model
     public $program_id;
     
     public $level_id;
+    
+    public $level_name;
+    
+    public $student_name;
+    
+    public $program_name;
 }
 

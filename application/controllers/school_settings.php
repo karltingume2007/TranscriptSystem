@@ -20,6 +20,7 @@ class school_settings extends MY_Controller {
             $return_value[] = $scl;
         }
         echo json_encode($return_value);
+        
     }
     
     
