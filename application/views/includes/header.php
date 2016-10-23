@@ -17,10 +17,20 @@
     <script type="text/javascript" src="<?php echo base_url('resources/js/bootstrap.min.js');?>"></script>
 	
 </head>
+<!-- php code to change the school name and logo -->
+<?php
+    $query = $this->db->get('systemSettings');
+    $result = array();
+    if ($query->num_rows() === 1) {
+        $result = $query->result();
+    }
+
+?>
+<!-- end of php code changing school name and logo -->
 
 <body bgcolor="#ccc">
     <div class="container">
-            <nav class="navbar navbar-default navbar-fixed-top" id="main-navbar">
+            <nav class="navbar navbar-inverse navbar-fixed-top" id="main-navbar">
                 <div class="container">
                     <button type="button" class="navbar-toggle" data-toggle="collapse"
                       data-target = ".navbar-collapse">
@@ -29,14 +39,21 @@
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>                        
                     </button>
-                    <a class="navbar-brand" href="<?php site_url() ?>">Fomic Polytechnic</a>
+                    <!-- inserting the school name and logo -->
+                    <?php foreach($result as $settings):?>
+                        
+                    <a class="navbar-brand" href="<?php echo site_url() ?>" style="margin-top:-2%">
+                        <span><img src="<?php echo base_url() . $settings->schoolLogo;?>" width="90px" height="80px"></span>
+                        <?php echo $settings->schoolName;?>
+                    </a>
+                    <?php endforeach;?>
+                    <!-- end inserting the school name and logo -->
 
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">                            
                             <?php
                                 echo "<li>" . anchor(site_url('school_settings'), "School Configuration") . "</li>";
                                 echo "<li>" . anchor(site_url('enrolments'), "Enrolments") . "</li>";
-                                echo "<li>" . anchor(site_url('marks'), "Marks") . "</li>";
                                 echo "<li>" . anchor(site_url('transcript'), "Transcript") . "</li>";
                                 echo "<li>" . anchor(site_url('setting'), "Settings") . "</li>";
                                 
