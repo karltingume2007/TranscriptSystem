@@ -136,7 +136,9 @@ $autoload['model'] = array(
     'detailed_program_course',
     'level',
     'course',
-    'program_course'
+    'program_course',
+    'Academic_year',
+    'detailed_school_program'
 );
 
 

@@ -7,6 +7,7 @@ class MY_Model extends CI_Model{
     function __construct()
     {
         parent::__construct();
+        mysqli_next_result($this->db->conn_id);
     }
     
     //create record

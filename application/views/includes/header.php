@@ -19,7 +19,8 @@
 </head>
 <!-- php code to change the school name and logo -->
 <?php
-    $query = $this->db->get('systemSettings');
+    mysqli_next_result($this->db->conn_id);
+    $query = $this->db->get('system_settings');
     $result = array();
     if ($query->num_rows() === 1) {
         $result = $query->result();
