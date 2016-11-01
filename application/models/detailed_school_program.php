@@ -11,5 +11,12 @@ class detailed_school_program extends MY_Model
     
     public $school_id;
     
+    public $school_name;
+    
     public $program_and_school;
+    
+    public function get_all_school_programs_ordered()
+    {        
+        return $this->get_ordered_by('school_name', 'ASC');
+    }
 }

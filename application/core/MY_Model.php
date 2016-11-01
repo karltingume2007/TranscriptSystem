@@ -66,6 +66,16 @@ class MY_Model extends CI_Model{
     }
     
     /*
+     * Get an array of models ordered by the specified column
+     */
+    public function get_ordered_by($column, $order = 'DESC')
+    {
+        $this->db->order_by($column, $order);
+        $query = $this->db->get($this::DB_TABLE);
+        return $query->result();
+    }
+    
+    /*
      * Get an array of Models with an optional limit, offset
      * 
      * @param int $limit Optional

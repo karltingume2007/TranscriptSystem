@@ -3,11 +3,11 @@
 class personel extends MY_Model
 {
     const DB_TABLE = 'personel';
-    const DB_TABLE_PK = 'personId';
+    const DB_TABLE_PK = 'person_id';
     
-    public $personId;
+    public $person_id;
     
-    public $personName;
+    public $person_name;
     
     public $qualification;
 }

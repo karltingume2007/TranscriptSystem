@@ -28,7 +28,8 @@ class global_json_repo extends MY_Controller
     public function get_all_Programs()
     {
         $prog = new detailed_school_program();
-        echo json_encode($prog->get());
+        $programs = $prog->get_all_school_programs_ordered();
+        echo json_encode($programs);
     }
     
     public function get_all_levels()
