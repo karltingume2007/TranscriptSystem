@@ -3,14 +3,20 @@
 class student extends MY_Model
  {
     const DB_TABLE = 'students';
-    const DB_TABLE_PK = 'studentId';
+    const DB_TABLE_PK = 'student_id';
 
-    public $studentId;
-    public $studentName;
+    public $student_id;
+    public $student_name;
     public $email;
-    public $phoneNumber;
+    public $phone_number;
     public $address;
     public $matricule;
     public $gender;
-    public $dateOfBirth;
+    public $date_of_birth;
+    
+    public function get_by_keyword($keyword)
+    {
+        $sql = "CALL search_student('$keyword')";
+        return $this->execute_query($sql);
+    }
 }

@@ -64,13 +64,11 @@ angular.module('transcript', [])
                 data: jsonObject
                 }).success(function (data, status, headers, config) 
                 {
-                    console.log(data);
                     $scope.getAllSchools();
                     $scope.showWaitForm = false;
                 })
                 .error(function (data, status, headers, config) 
                 {
-                    console.log(data);
                     $scope.showWaitForm = false;
                 });
     };

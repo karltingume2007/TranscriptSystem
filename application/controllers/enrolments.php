@@ -23,4 +23,20 @@ class enrolments extends MY_Controller
         
         echo json_encode($return_value);
     }
+    
+    public function save_enrolment()
+    {
+        $data = json_decode(file_get_contents("php://input"));
+        
+        $en = new enrolment();
+        $en->student_id = isset($data->student_id)? $data->student_id : 0;
+        $en->academic_year = isset($data->academic_year)? $data->academic_year : null;
+        $en->program_id = isset($data->program_id)? $data->program_id : 0;
+        $en->level_id = isset($data->level_id)? $data->level_id : 0;
+        
+        $en->save();
+        
+        echo json_encode($en);
+        
+    }
 }
