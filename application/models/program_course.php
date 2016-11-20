@@ -16,4 +16,6 @@ class program_course extends MY_Model
     public $semester;
     
     public $credit_value;
+    
+    public $teacher_id;
 }

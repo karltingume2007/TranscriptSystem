@@ -24,7 +24,17 @@ class enrolments extends MY_Controller
         echo json_encode($return_value);
     }
     
-    public function save_enrolment()
+    public function get_enrolment($id)
+    {
+        $en = new detailed_enrollment();
+        $en->load($id);
+        $en_array = (array)$en;
+        $en_array['courses'] = $en->get_enrolment_courses();
+        
+        echo json_encode($en_array);
+    }
+    
+    public function save_new_enrolment()
     {
         $data = json_decode(file_get_contents("php://input"));
         
@@ -36,7 +46,21 @@ class enrolments extends MY_Controller
         
         $en->save();
         
-        echo json_encode($en);
+        //create student courses for this enrolment
+        $pc = new program_course();
+        $all_courses = $pc->get_where(array('program_id' => $en->program_id, 'level_id'=>$en->level_id));
+        foreach ($all_courses as $p_course)
+        {
+            $sc = new student_course();
+            $sc->enrollment_id = $en->enrollment_id;
+            $sc->course_id = $p_course->course_id;
+            $sc->teacher_id = $p_course->teacher_id;
+            $sc->semester = $p_course->semester;
+            $sc->credit_value = $p_course->credit_value;
+            $sc->save();
+        }
+        
+        $this->get_enrolment($en->enrollment_id);
         
     }
 }

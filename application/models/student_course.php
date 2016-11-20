@@ -5,15 +5,15 @@ class student_course extends MY_Model
     const DB_TABLE = 'student_courses';
     const DB_TABLE_PK = 'student_course_id';
     
-    public $enrollmentId;
+    public $enrollment_id;
     
-    public $courseId;
+    public $course_id;
     
-    public $caMark;
+    public $ca_mark;
     
-    public $examMark;
+    public $exam_mark;
     
-    public $teacherId;
+    public $teacher_id;
     
     public $semester;
     

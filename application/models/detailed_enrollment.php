@@ -28,5 +28,11 @@ class detailed_enrollment extends MY_Model
         $sql = "CALL get_detailed_enrollments('$academic_year', $student_id, $program_id, $level_id)";
         return $this->execute_query($sql);
     }
+    
+    public function get_enrolment_courses()
+    {
+       $student_course = new detailed_student_course();
+       return $student_course->get_where(array('enrollment_id' => $this->enrollment_id));
+    }
 }
 
