@@ -72,7 +72,19 @@
                                 <th>Semester</th>
                                 <th></th>
                             </thead>
-                            <tr ng-repeat="course in level.courses">
+                            <tr ng-if="course.semester === '1'"  ng-repeat="course in level.courses">
+                                <td>{{course.course_code}}</td>
+                                <td>{{course.course_name}}</td>
+                                <td>{{course.credit_value}}</td>
+                                <td>{{course.semester}}</td>
+                                <td>
+                                    <a href="#" data-target="#addEditProgramCourse" data-toggle="modal"
+                                       ng-click="setCurrentProgramCourseAndLevel(course, level)">
+                                        <i class="fa fa-pencil"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr ng-if="course.semester === '2'"  ng-repeat="course in level.courses">
                                 <td>{{course.course_code}}</td>
                                 <td>{{course.course_name}}</td>
                                 <td>{{course.credit_value}}</td>

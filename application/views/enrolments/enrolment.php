@@ -76,33 +76,35 @@
              role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header">
+<!--                    <div class="modal-header">
                        
-                    </div>
+                    </div>-->
                     <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                         <table class="table table-bordered table-hover table-responsive">
                             <tr>
                                 <td><strong>Name</strong></td>
-                                <td colspan="3">{{current_enrolment.student_name}}</td>
+                                <td colspan="2">{{current_enrolment.student_name}}</td>
                                 <td><strong>Field</strong></td>
                                 <td colspan="2">{{current_enrolment.program_name}}</td>
                             </tr>
                             <tr>
                                 <td><strong>Matricule</strong></td>
-                                <td colspan="3">{{current_enrolment.matricule}}</td>
+                                <td colspan="2">{{current_enrolment.matricule}}</td>
                                 <td><strong>Level</strong></td>
                                 <td colspan="2">{{current_enrolment.level_name}}</td>
                             </tr>
                             
-                            <tr><td colspan="7" style="text-align: center; background-color: black; color:white">First Semester - {{current_enrolment.academic_year}}</td></tr>
-                            <tr style="">
+                            <tr><td colspan="6" style="text-align: center; background-color: #555; color:white">First Semester - {{current_enrolment.academic_year}}</td></tr>
+                            <tr style="font-weight: bold">
                                 <td>Course Code</td>
                                 <td>Course Name</td>
-                                <td>CA Mark</td>
-                                <td>Exam Mark</td>
+                                <td>CA</td>
+                                <td>Exam</td>
                                 <td>Credit Value</td>
                                 <td>Teacher</td>
-                                <td>Semester</td>
                             </tr>
                             <tr ng-if="course.semester === '1'" ng-repeat="course in current_enrolment.courses">
                                 <td>{{course.course_code}}</td>
@@ -111,19 +113,17 @@
                                 <td>{{course.exam_mark}}</td>
                                 <td>{{course.credit_value}}</td>
                                 <td>{{course.person_name}}</td>
-                                <td>{{course.semester}}</td>
                             </tr>
                             
                             
-                            <tr><td colspan="7" style="text-align: center; background-color: black; color:white">Second Semester - {{current_enrolment.academic_year}}</td></tr>
-                            <tr style="font-size: bold;">
+                            <tr><td colspan="6" style="text-align: center; background-color: #555; color:white">Second Semester - {{current_enrolment.academic_year}}</td></tr>
+                            <tr style="font-weight: bold;">
                                 <td>Course Code</td>
                                 <td>Course Name</td>
-                                <td>CA Mark</td>
-                                <td>Exam Mark</td>
+                                <td>CA</td>
+                                <td>Exam</td>
                                 <td>Credit Value</td>
                                 <td>Teacher</td>
-                                <td>Semester</td>
                             </tr>
                             <tr ng-if="course.semester === '2'" ng-repeat="course in current_enrolment.courses">
                                 <td>{{course.course_code}}</td>
@@ -132,7 +132,6 @@
                                 <td>{{course.exam_mark}}</td>
                                 <td>{{course.credit_value}}</td>
                                 <td>{{course.person_name}}</td>
-                                <td>{{course.semester}}</td>
                             </tr>
                         </table>
                         
